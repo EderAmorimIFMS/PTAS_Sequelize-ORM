@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async function(req, res){
-  var usuarios = await usuario.findAll();
-  res.render('index', { usuarios });
+  var pessoas = await pessoa.findAll();
+  res.render('index', { pessoas });
 });
 
 app.get('/pessoas/criar', async function(req, res){
