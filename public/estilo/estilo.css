@@ -3,7 +3,19 @@ body {
 }
 
 fieldset {
-    display: block;
+    width: 30%;
+    margin: 0 auto;
+    border: 2px inset black;
+    border-radius: 3px;
+}
+
+.input-text {
+  display: block;
+  margin: ;
+  padding: ;
+  width: ;
+  background-color: ;
+  border: ;
 }
 
 .container {

@@ -18,8 +18,7 @@ app.get('/', async function(req, res){
 });
 
 app.get('/pessoas/criar', async function(req, res){
-  var pessoas = await pessoa.findAll();
-  res.render('/pessoas/criar', { pessoas });
+  res.render('/pessoas/criar');
 });
 
 app.post('/pessoas/criar', async function(req, res){

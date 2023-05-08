@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="../estilo/estilo.css"/>
 </head>
 <body>
-<fieldset>
+
+<form method="post" action="/pessoas/criar"></form>
+    <fieldset>
     <legend>Cadastrar pessoa: </legend>
-<form method="post" action="/pessoas/criar">
+
     <label for="nome">Nome: </label>
-    <input type="text" name="nome" placeholder="Digite o nome."/>
+    <input type="text" name="nome" placeholder="Digite o nome." class="input-text"/>
 
     <label for="idade">Idade: </label>
-    <input type="text" value="idade" placeholder="Digite a idade."/>
+    <input type="text" value="idade" placeholder="Digite a idade." class="input-text"/>
 
     <label for="profissao">Profissão: </label>
-    <input type="text" name="profissao" placeholder="Digite a profissão."/>
+    <input type="text" name="profissao" placeholder="Digite a profissão." class="input-text"/>
 
     <input type="submit" onclick=""/>
 </form>
