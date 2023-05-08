@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizual<object data="" type=""></object></title>
+</head>
+<body>
+
+<div class="container">
+   <div class="card">
+    <% pessoas.forEach((pessoa) => { %>
+        <h2>Pessoa</h2>
+        <p><%= pessoa.nome %></p>
+        <p><%= pessoa.idade %></p>
+        <p><%= pessoa.profissao %></p>
+    <% }) %>
+   </div>
+</div>
+
+</body>
+</html>
