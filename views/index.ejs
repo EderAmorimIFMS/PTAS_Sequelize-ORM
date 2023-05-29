@@ -22,3 +22,41 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizual<object data="" type=""></object></title>
+    <link rel="stylesheet" href="estilo/estilo.css"/>
+</head>
+<body>
+
+<div class="titulo">
+   <h1> Pessoas Criadas </h1>
+</div>
+
+<a href="pessoas/criar.ejs">Cadastrar pessoas</a>
+
+<div class="container">
+    <% pessoas.forEach((pessoa) => { %>
+    <div class="card">
+        <h2>Pessoa</h2>
+
+       
+        <p><%= pessoa.nome %></p>
+        <p><%= pessoa.idade %> anos</p>
+        <p><%= pessoa.profissao %></p>
+
+        <form method="post" action="/pessoas/delete?id=<%= pessoa.id%>">
+           <input type="submit" value="Excluir" class="input-submit"/>
+        </form>
+    </div>
+    <% }) %>
+
+</div>
+
+</body>
+</html>

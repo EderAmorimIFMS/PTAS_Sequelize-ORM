@@ -17,17 +17,35 @@ app.get('/', async function(req, res){
   res.render('index', { pessoas });
 });
 
+/*app.get('/', async function(req, res){
+  var pessoas = await pessoa.findAll();
+  res.render('/pessoas/criar', { pessoas });
+});*/
+
 app.get('/pessoas/criar', async function(req, res){
-  res.render('/pessoas/criar');
+  res.render('pessoas/criar');
 });
 
-app.post('/pessoas/criar', async function(req, res){
+app.post('/pessoas/cadastrar', async function(req, res){
   try {
-      await Pessoa.create(req.body);
-      res.redirect('/pessoas')
+      await pessoa.create(req.body);
+      res.redirect('/')
+      alert("pessoa criada ;)")
   } catch (err) {
       console.error(err);
       res.status(500).json({ message: 'Ocorreu um erro ao criar a pessoa.' });
+  }
+})
+
+app.post('/pessoas/delete', async function(req, res){
+  try {
+      await pessoa.destroy({ where: { id: req.query.id } });
+      res.redirect('/')
+      alert("Pessoa deletada com sucesso");
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Ocorreu um erro ao deletar o usuário.' });
+      alert("Ocorreu um erro ao deletar o usuário.");
   }
 })
 
@@ -42,4 +60,4 @@ app.post('/pessoas/criar', async function(req, res){
 
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
-});
+});''

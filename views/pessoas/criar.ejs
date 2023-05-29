@@ -9,20 +9,22 @@
 </head>
 <body>
 
-<form method="post" action="/pessoas/criar"></form>
+    <a href="../index.ejs">Lista de pessoas</a>
+
+<form method="post" action="/pessoas/cadastrar"></form>
     <fieldset>
     <legend>Cadastrar pessoa: </legend>
 
-    <label for="nome">Nome: </label>
+    <label for="nome"><p>Nome: </p></label>
     <input type="text" name="nome" placeholder="Digite o nome." class="input-text"/>
 
-    <label for="idade">Idade: </label>
+    <label for="idade"><p>Idade: </p></label>
     <input type="text" value="idade" placeholder="Digite a idade." class="input-text"/>
 
-    <label for="profissao">Profissão: </label>
+    <label for="profissao"><p>Profissão: </p></label>
     <input type="text" name="profissao" placeholder="Digite a profissão." class="input-text"/>
 
-    <input type="submit" onclick=""/>
+    <input type="submit" value="Enviar" class="input-submit">
 </form>
 </fieldset>
 </body>
