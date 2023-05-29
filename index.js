@@ -29,7 +29,7 @@ app.get('/pessoas/criar', async function(req, res){
 app.post('/pessoas/cadastrar', async function(req, res){
   try {
       await pessoa.create(req.body);
-      res.redirect('/')
+      res.redirect('/pessoas')
       alert("pessoa criada ;)")
   } catch (err) {
       console.error(err);
@@ -40,7 +40,7 @@ app.post('/pessoas/cadastrar', async function(req, res){
 app.post('/pessoas/delete', async function(req, res){
   try {
       await pessoa.destroy({ where: { id: req.query.id } });
-      res.redirect('/')
+      res.redirect('/pessoas')
       alert("Pessoa deletada com sucesso");
   } catch (err) {
       console.error(err);
