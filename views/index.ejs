@@ -23,7 +23,7 @@
         <p><%= pessoa.idade %> anos</p>
         <p><%= pessoa.profissao %></p>
 
-        <form method="post" action="/pessoas/delete?id=<%=pessoa.id%>">
+        <form method="get" action="/pessoas/delete?id=<%=pessoa.id%>">
            <input type="submit" value="Excluir" class="input-submit"/>
         </form>
     </div>
