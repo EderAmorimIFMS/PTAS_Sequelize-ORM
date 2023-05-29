@@ -49,15 +49,6 @@ app.post('/pessoas/delete', async function(req, res){
   }
 })
 
-/*app.post('/pessoas/atualizar', async function(req, res){
-    try {
-        Pessoa.update(req.body, { where: { id: req.body.id } });
-        res.redirect('/pessoas')
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Ocorreu um erro ao atualizar a pessoa.' });
-}*/
-
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
 });''
