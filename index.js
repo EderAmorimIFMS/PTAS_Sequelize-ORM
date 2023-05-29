@@ -37,7 +37,7 @@ app.post('/pessoas/cadastrar', async function(req, res){
   }
 })
 
-app.post('/pessoas/delete', async function(req, res){
+app.get('/pessoas/delete', async function(req, res){
   try {
       await pessoa.destroy({ where: { id: req.query.id } });
       res.redirect('/pessoas')
